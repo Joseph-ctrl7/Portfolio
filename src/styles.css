@@ -1,0 +1,270 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    height: 500px;
+    background-color: white;
+    border: solid black;
+}
+
+.hero {
+    background-color: #b800f0;
+    height: 100vh;
+    color: white;
+    font-size: 40px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 80px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    width: 500px;
+    justify-content: space-around;
+    font-size: 30px;
+    margin-left: 400px;
+}
+
+li {
+    /*width: 200px;*/
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 90px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+p {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.subtext {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.hero-area {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    margin-left: 80px;
+    margin-bottom: 200px;
+}
+
+.button {
+    width: 200px;
+    height: 55px;
+    border-radius: 40px;
+    background-color: blue;
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+    padding-top: 5px;
+    margin-top: 20px;
+    /* -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out; */
+    transition: all 300ms ease-in-out;
+}
+
+.button:hover {
+    background-color: white;
+    color: blue;
+    cursor: pointer;
+    font-size: 32px;
+    text-align: center;
+    /* opacity: 0.75; */
+}
+.button:active{
+    background-color: darkgray;
+    color: #808080;
+}
+
+.socials {
+    padding-bottom: 200px;
+}
+
+.social {
+    margin: 20px;
+}
+
+.subsection {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+.subsection-alternative {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 130px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.about-me-image-container {
+    display: flex;
+    align-items: center;
+}
+
+.project-card {
+    width: 200px;
+    height: 400px;
+    box-shadow: 5px 5px 20px rgb(238, 232, 232);
+    margin: 10px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 1000px) {
+    .project-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+    
+
+hr {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: aquamarine;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+}
+
+span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-radius: 4px;
+    background-color: white;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 7px;
+    transition: all 300ms ease-in-out;
+    transform-origin: 1px 3px;
+}
+
+.header .hamburger.show  > span:first-child {
+    transform: rotate(45deg);
+}
+
+.header .hamburger.show  > span:nth-child(2) {
+    opacity: 0;
+}
+
+.header .hamburger.show  > span:last-child {
+    transform: rotate(-45deg);
+}
+
+ul.menu {
+    display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hamburger {
+        display: block;
+        margin: 20px;
+        align-self: flex-end;
+    }
+
+    ul {
+        display: none;
+        background-color: #d149fa;
+        margin: 0px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #d149fa;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .button {
+        width: 8rem;
+        height: 1.875rem;
+        font-size: 1rem;
+    }
+
+    .button:hover {
+        background-color: white;
+        color: blue;
+        cursor: pointer;
+        font-size: 18px;
+        text-align: center;
+        /* opacity: 0.75; */
+    }
+    
+}
+
+/* animations */
+.has-fade {
+    visibility: hidden;
+}
+
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+    
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
