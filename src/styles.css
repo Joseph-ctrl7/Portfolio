@@ -1,18 +1,20 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
+
 section {
-    height: 500px;
+    height: 100vh;
     background-color: white;
-    border: solid black;
 }
 
 .hero {
-    background-color: #b800f0;
+    background-image: linear-gradient(to bottom, #845ec2, #d65db1, white);
     height: 100vh;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 footer {
@@ -25,34 +27,46 @@ footer {
 nav {
     display: flex;
     justify-content: space-between;
+    transform: translateY(-70px);
+    transition: 0.8s;
 }
 
-ul {
+#navList {
     display: flex;
     list-style-type: none;
     width: 500px;
     justify-content: space-around;
-    font-size: 30px;
-    margin-left: 400px;
+    font-size: 15px;
 }
 
-li {
+
+#navList li a{
     /*width: 200px;*/
+    color: white;
     text-decoration: none;
+    transition: all 300ms ease-in-out;
+    padding: 5px 16px;
+    border-radius: 40px;
+}
+
+
+#navList li a:hover{
+    color: #845ec2;
+    background-color: white;
 }
 
 h1 {
-    font-size: 90px;
+    font-size: 80px;
     margin: 0;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 p {
     margin: 0;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 300;
 }
 
@@ -66,37 +80,47 @@ p {
     height: 100%;
     justify-content: space-between;
     align-items: center;
+    animation: fade-in-up 1000ms forwards;
+    animation-delay: 300ms;
+    opacity: 0;
 }
 
 .hero-text {
     margin-left: 80px;
     margin-bottom: 200px;
+    padding-top: 150px;
 }
 
-.button {
-    width: 200px;
-    height: 55px;
-    border-radius: 40px;
-    background-color: blue;
-    text-align: center;
+.hero-text p {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.button a{
+    width: 100px;
+    height: 35px;
     font-weight: 300;
-    font-size: 30px;
-    padding-top: 5px;
+    font-size: 15px;
+    border: solid white;
+    color: white;
+    border-radius: 40px;
+    text-align: center;
     margin-top: 20px;
+    padding:10px;
     /* -webkit-transition: opacity 300ms ease-in-out;
     transition: opacity 300ms ease-in-out; */
-    transition: all 300ms ease-in-out;
+    transition: all 150ms ease-in-out;
 }
 
-.button:hover {
-    background-color: white;
-    color: blue;
+
+.button a:hover {
     cursor: pointer;
-    font-size: 32px;
     text-align: center;
+    color: #845ec2;
+    background-color: white;
     /* opacity: 0.75; */
 }
-.button:active{
+.button a:active{
     background-color: darkgray;
     color: #808080;
 }
@@ -109,7 +133,7 @@ p {
     margin: 20px;
 }
 
-.subsection {
+#about-me {
     display: flex;
     justify-content: space-around;
     padding: 80px;
@@ -129,15 +153,47 @@ p {
 }
 
 .project-card {
-    width: 200px;
+    width: 400px;
     height: 400px;
     box-shadow: 5px 5px 20px rgb(238, 232, 232);
     margin: 10px;
+    border-radius: 30px;
 }
 
 .project-container {
     display: flex;
     justify-content: space-around;
+    display:flex;
+    flex-direction:row;
+    padding: 80px;
+    align-items:center;
+    overflow:hidden;
+    height:100vh;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    transition:.25s;
+
+}
+
+.project-container i {
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    background: #845ec2;
+    position: absolute;
+    color: white;
+    border-radius: 50%;
+}
+
+.project-container i:first-child{
+    left: 50px;
+}
+
+.project-container i:last-child{
+    right: 50px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -265,6 +321,51 @@ ul.menu {
         opacity: 1;
     }
 }
+
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(0)px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(50px);
+    transform: translateY(20%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.project-card:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.project-card:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.project-card:nth-child(4){
+    transition-delay: 600ms;
+}
+
+.about-me-text:nth-child(2){
+    transition-delay: 200ms;
+}
+
+
+
 
 
 

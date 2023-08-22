@@ -7,13 +7,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-    <section class="hero">
+    <section class="hero" id="home">
         <header class="header">
             <nav>
                 <div class="logo">LOGO</div>
                 <ul id="navList">
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about-me">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contacts">Contacts</a></li>
@@ -27,9 +29,10 @@
         </header>
         <div class="hero-area">
             <div class="hero-text">
-                <h1>Joseph Anyia</h1>
-                <p>Software Engineering Student</p>
-                <div class="button">About Me</div>
+                <p>Hi, my name is</p>
+               <h1>Joseph Anyia</h1>
+                <p>I'm a Software Developer</p>
+                <div class="button"><a href="#about-me">About Me</a></div>
             </div>
             <div class="socials">
                 <div class="social">
@@ -41,49 +44,53 @@
             </div>
         </div>
     </section>
-    <section id="about-me" class="subsection">
+    <section id="about-me" class="hidden">
         <div class="information">
-            <h2>About Me</h2>
-            <p>
+            <h2 class="about-me-text hidden">About Me</h2>
+            <p class="about-me-text hidden">
                 Hello! My name is Joseph Anyia. I am a Software Engineering student who is aspiring to become a software
                  developer and a front end web developer
             </p>
         </div>
         <div class="about-me-image-container"></div>
     </section>
-    <section id="projects" class="subsection-alternative">
+
+    <section id="projects" class="subsection-alternative hidden">
         <h2>Projects</h2>
         <div class="project-container">
-            <div class="project-card">
+            <i class="fa-solid fa-angle-left"></i>
+            <div class="project-card hidden">
                 <img class="project-image" src="" alt="Project One Image">
                 <h3>Project One</h3>
                 <p class="subtext">This project includes....</p>
                 <hr/>
                 <p class="subtext"><a class= "project-link" href="">View Here</a></p>
             </div>
-            <div class="project-card">
+            <div class="project-card hidden">
                 <img class="project-image" src="" alt="Project Two Image">
                 <h3>Project Two</h3>
                 <p class="subtext">This project includes....</p>
                 <hr/>
                 <p class="subtext">View Here</p>
             </div>
-            <div class="project-card">
+            <div class="project-card hidden">
                 <img class="project-image" src="" alt="Project Three Image">
                 <h3>Project Three</h3>
                 <p class="subtext">This project includes....</p>
                 <hr/>
                 <p class="subtext">View Here</p>
             </div>
-            <div class="project-card">
+            <div class="project-card hidden">
                 <img class="project-image" src="" alt="Project Four Image">
                 <h3>Project Four</h3>
                 <p class="subtext">This project includes....</p>
                 <hr/>
                 <p class="subtext">View Here</p>
             </div>
+            <i class="fa-solid fa-angle-right"></i>
         </div>
     </section>
+
     <footer id="contacts">
         <h2>Contact Me</h2>
         <p>janyia332@gmail.com</p>
