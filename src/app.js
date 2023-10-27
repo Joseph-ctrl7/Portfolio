@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     const hamburgerButton = document.getElementById('hamburger');
-    const navList = document.getElementById('navList');
+    const navList = document.querySelector('.navList');
     const nav = document.querySelector('nav');
     const header = document.querySelector('.header');
 

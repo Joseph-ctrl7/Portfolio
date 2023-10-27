@@ -10,23 +10,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
+    <header class="header">
+        <div class="logo">LOGO</div>
+        <nav>
+           <ul class="navList">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+            <a id="hamburger" href="#" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+        </nav>
+    </header>
     <section class="hero" id="home">
-        <header class="header">
-            <nav>
-                <div class="logo">LOGO</div>
-                <ul id="navList">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                </ul>
-                <a id="hamburger" href="#" class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </a>
-            </nav>
-        </header>
         <div class="hero-area">
             <div class="hero-text">
                 <p>Hi, my name is</p>
@@ -59,36 +59,92 @@
         <h2>Projects</h2>
         <div class="project-container">
             <i class="fa-solid fa-angle-left"></i>
-            <div class="project-card hidden">
-                <img class="project-image" src="" alt="Project One Image">
-                <h3>Project One</h3>
-                <p class="subtext">This project includes....</p>
-                <hr/>
-                <p class="subtext"><a class= "project-link" href="">View Here</a></p>
-            </div>
-            <div class="project-card hidden">
-                <img class="project-image" src="" alt="Project Two Image">
-                <h3>Project Two</h3>
-                <p class="subtext">This project includes....</p>
-                <hr/>
-                <p class="subtext">View Here</p>
-            </div>
-            <div class="project-card hidden">
-                <img class="project-image" src="" alt="Project Three Image">
-                <h3>Project Three</h3>
-                <p class="subtext">This project includes....</p>
-                <hr/>
-                <p class="subtext">View Here</p>
-            </div>
-            <div class="project-card hidden">
-                <img class="project-image" src="" alt="Project Four Image">
-                <h3>Project Four</h3>
-                <p class="subtext">This project includes....</p>
-                <hr/>
-                <p class="subtext">View Here</p>
-            </div>
+            <ul class="card-wrapper">
+                <li class="card">
+
+                    <div class="card-content">
+                        <h3>Project One</h3>
+                        <p class="subtext">This project includes....</p>
+                        <button class="card-button">View Here</button>
+                    </div>
+                </li>
+                <li class="card">
+
+                    <div class="card-content">
+                        <h3>Project Two</h3>
+                        <p class="subtext">This project includes....</p>
+                        <button class="card-button">View Here</button>
+                    </div>
+                </li>
+                <li class="card">
+
+                     <div class="card-content">
+                        <h3>Project Three</h3>
+                        <p class="subtext">This project includes....</p>
+                        <button class="card-button">View Here</button>
+                    </div>
+                </li>
+                <li class="card">
+
+                    <div class="card-content">
+                        <h3>Project Four</h3>
+                        <p class="subtext">This project includes....</p>
+                        <button class="card-button">View Here</button>
+                    </div>
+                </li>
+                <li class="card">
+
+                    <div class="card-content">
+                        <h3>Project One</h3>
+                        <p class="subtext">This project includes....</p>
+                        <button class="card-button">View Here</button>
+                    </div>
+                </li>
+                <li class="card">
+
+                    <div class="card-content">
+                        <h3>Project One</h3>
+                        <p class="subtext">This project includes....</p>
+                        <button class="card-button">View Here</button>
+                    </div>
+                </li>
+            </ul>
             <i class="fa-solid fa-angle-right"></i>
         </div>
+            <!--
+            <i class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+                <div class="project-card hidden">
+                    <img class="project-image" src="" alt="Project One Image">
+                    <h3>Project One</h3>
+                    <p class="subtext">This project includes....</p>
+                    <hr/>
+                    <p class="subtext"><a class= "project-link" href="">View Here</a></p>
+                </div>
+                <div class="project-card hidden">
+                    <img class="project-image" src="" alt="Project Two Image">
+                    <h3>Project Two</h3>
+                    <p class="subtext">This project includes....</p>
+                    <hr/>
+                    <p class="subtext">View Here</p>
+                </div>
+                <div class="project-card hidden">
+                    <img class="project-image" src="" alt="Project Three Image">
+                    <h3>Project Three</h3>
+                    <p class="subtext">This project includes....</p>
+                    <hr/>
+                    <p class="subtext">View Here</p>
+                </div>
+                <div class="project-card hidden">
+                    <img class="project-image" src="" alt="Project Four Image">
+                    <h3>Project Four</h3>
+                    <p class="subtext">This project includes....</p>
+                    <hr/>
+                    <p class="subtext">View Here</p>
+                </div>
+            </div>
+            <i class="fa-solid fa-angle-right"></i>
+        </div> -->
     </section>
 
     <footer id="contacts">
