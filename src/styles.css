@@ -219,7 +219,9 @@ span {
 #about-me {
     display: flex;
     justify-content: space-around;
-    padding: 80px;
+    align-content: center;
+    margin: 80px;
+    padding-top: 150px;
 }
 
 
@@ -233,17 +235,16 @@ span {
     padding-right: 80px;*/
 }
 
-.about-me-image-container {
-    display: flex;
+.information {
     align-items: center;
+    padding-top: 150px;
 }
 
 .project-container{
-    max-width: 1050px;
+    max-width: 905px;
     width: 100%;
     background-color: beige;
     position: relative;
-    margin-right: 40px;
 }
 
 .project-container i {
@@ -262,7 +263,7 @@ span {
 }
 
 .project-container i:first-child{
-    left: 20px;
+    left: -20px;
 }
 
 .project-container i:last-child{
@@ -273,14 +274,37 @@ span {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 3) - 10.5px);
-    gap: 16px;
-    overflow: hidden;
+    gap: 26px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 0;
+}
+
+.card-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.card-wrapper.dragging{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.card-wrapper.dragging .card{
+    cursor: grab;
+    user-select: none;
 }
 
 .card-wrapper .card{
+    scroll-snap-align: start;
     height: 342px;
+    width: 250px;
     list-style: none;
     border-radius: 25px;
+    margin: 10px;
     background-color: #808080;
 }
 
@@ -311,17 +335,120 @@ span {
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
     /*
     .project-container {
         display: flex;
         flex-wrap: wrap;
     }*/
 
-    .project-container .card-wrapper{
-        grid-auto-columns: calc((100% / 2) - 9px);
+    h1 {
+        font-size: 60px;
+        margin: 0;
     }
+
+    h2 {
+        font-size: 35px;
+    }
+    
+    p {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    .about-me-text {
+        font-size: 20px;
+    }
+
+    nav .navList li a{
+        padding: 15px 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 5px;
+        display: block;
+        height: 100%;
+        border-radius: 40px;
+        transition: all 300ms ease-in-out;
+    }
+
+    #about-me {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 80px;
+        margin-bottom: 200px;
+        padding-top: 150px;
+    }
+
+    .project-container{
+        max-width: 650px;
+        width: 100%;
+        background-color: beige;
+        position: relative;
+    }
+    
+    .project-container i {
+        height: 50px;
+        width: 50px;
+        background: #845ec2;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0 3px  6px rgba(0,0,0,0.23);
+    }
+    
+    .project-container i:first-child{
+        left: -20px;
+    }
+    
+    .project-container i:last-child{
+        right: -20px;
+    }
+    
+     .card-wrapper{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 2) - 9.6px);
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+    
+    .card-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .card-wrapper.dragging{
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+    }
+    
+    .card-wrapper.dragging .card{
+        cursor: grab;
+        user-select: none;
+    }
+    
+    .card-wrapper .card{
+        scroll-snap-align: start;
+        height: 342px;
+        width: 285px;
+        list-style: none;
+        border-radius: 25px;
+        margin: 10px;
+        background-color: #808080;
+    }
+    
 }
+
+
     
 /*
 hr {
@@ -373,7 +500,7 @@ ul.menu {
 }*/
 
 
-@media (max-width: 600px) {
+@media (max-width: 710px) {
     
     .hamburger {
         display: block;
@@ -381,8 +508,69 @@ ul.menu {
         align-self: flex-end;
     }
 
-    .project-container .card-wrapper{
-        grid-auto-columns: calc((100% / 1) - 6px);
+    .project-container{
+        max-width: 345px;
+        width: 100%;
+        background-color: beige;
+        position: relative;
+    }
+
+    .project-container i {
+        height: 50px;
+        width: 50px;
+        background: #845ec2;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0 3px  6px rgba(0,0,0,0.23);
+    }
+    
+    .project-container i:first-child{
+        left: -20px;
+    }
+    
+    .project-container i:last-child{
+        right: -20px;
+    }
+
+    .card-wrapper{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 1) - 7.1px);
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    .card-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .card-wrapper.dragging{
+        scroll-snap-type: none;
+        scroll-behavior: auto;
+    }
+    
+    .card-wrapper.dragging .card{
+        cursor: grab;
+        user-select: none;
+    }
+    
+    .card-wrapper .card{
+        scroll-snap-align: start;
+        height: 342px;
+        width: 285px;
+        list-style: none;
+        border-radius: 25px;
+        margin: 10px;
+        background-color: #808080;
     }
 
     h1 {
@@ -411,9 +599,62 @@ ul.menu {
         text-align: center;
          opacity: 0.75; 
     }
-
-    
 }
+
+@media (max-width: 450px){
+    .project-container{
+        max-width: 300px;
+        width: 100%;
+        background-color: beige;
+        position: relative;
+    }
+
+    .project-container i {
+        height: 50px;
+        width: 50px;
+        background: #845ec2;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0 3px  6px rgba(0,0,0,0.23);
+    }
+    
+    .project-container i:first-child{
+        left: -20px;
+    }
+    
+    .project-container i:last-child{
+        right: -20px;
+    }
+
+    .card-wrapper{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 1) - 4.5px);
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    .card-wrapper .card{
+        scroll-snap-align: start;
+        height: 342px;
+        width: 240px;
+        list-style: none;
+        border-radius: 25px;
+        margin: 10px;
+        background-color: #808080;
+    }
+}
+
+
 
 /* animations */
 .has-fade {
