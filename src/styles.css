@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(to bottom, #845ec2, #d65db1, white);
+    background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -9,7 +11,6 @@ body {
     height: 55px;
     display: flex;
     justify-content: space-between;
-    background-color: #845ec2;
 }
 
 .logo{
@@ -53,6 +54,7 @@ nav .navList li a:hover{
     color: #845ec2;
     background-color: white;
 }
+
 /*
 nav #navList{
     list-style-type: none;
@@ -73,11 +75,10 @@ nav a{
 
 section {
     height: 100vh;
-    background-color: white;
+    /*background-color: white;*/
 }
 
 .hero {
-    background-image: linear-gradient(to bottom, #845ec2, #d65db1, white);
     height: 100vh;
     color: white;
     font-size: 30px;
@@ -213,7 +214,16 @@ span {
 }
 
 .social {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
     margin: 20px;
+    transition: all 150ms ease-in-out;
+}
+
+.social:hover{
+    box-shadow: 0 3px  6px rgba(0,0,0,0.23);
+    transform: translateY(-0.1em);
 }
 
 #about-me {
@@ -243,7 +253,6 @@ span {
 .project-container{
     max-width: 905px;
     width: 100%;
-    background-color: beige;
     position: relative;
 }
 
@@ -258,16 +267,22 @@ span {
     cursor: pointer;
     position: absolute;
     top: 50%;
+    transition: all 150ms ease-in-out;
     transform: translateY(-50%);
     box-shadow: 0 3px  6px rgba(0,0,0,0.23);
 }
 
 .project-container i:first-child{
-    left: -20px;
+    left: -30px;
 }
 
 .project-container i:last-child{
-    right: -20px;
+    right: -30px;
+}
+
+.project-container i:hover{
+    color: #845ec2;
+    background: white;
 }
 
  .card-wrapper{
@@ -305,14 +320,76 @@ span {
     list-style: none;
     border-radius: 25px;
     margin: 10px;
-    background-color: #808080;
+    overflow: hidden;
+    background-image: url(/img/smartmockups.jpg);
+    background-size: cover;
+    transition: transform 200ms ease;
 }
+
+.card:hover, .card:focus-within{
+    box-shadow: 0 3px  6px rgba(0,0,0,0.23);
+    transform: translateY(-0.5em);
+}
+
 
 .card-content{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 14px;
+    margin-top: 170px;
+    color: white;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 20%,
+        hsl(0 0% 0% / 1)
+    );
+    /*border-radius: 25px;*/
+    transform: translateY(60%);
+    transition: transform 500ms ease;
+}
+
+.card-content > *:not(.card-title){
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+.card:hover .card-content > *:not(.card-title),
+.card:focus-within .card-content > *:not(.card-title){
+    opacity: 1;
+    transition-delay: 1000ms;
+}
+
+.card:hover .card-content, .card:focus-within .card-content{
+    transform: translateY(0);
+    transition-delay: 500ms;
+}
+
+.card:focus-within .card-content{
+    transition-duration: 0ms;
+}
+
+.card-title{
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    left: calc(1.5rem * -1);
+    bottom: 0;
+    width: calc(100% + 1.5rem);
+    background: #845ec2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
+    transform: scaleX(1);
 }
 
 .card-button{
@@ -384,7 +461,6 @@ span {
     .project-container{
         max-width: 650px;
         width: 100%;
-        background-color: beige;
         position: relative;
     }
     
@@ -404,11 +480,11 @@ span {
     }
     
     .project-container i:first-child{
-        left: -20px;
+        left: -30px;
     }
     
     .project-container i:last-child{
-        right: -20px;
+        right: -30px;
     }
     
      .card-wrapper{
@@ -511,7 +587,6 @@ ul.menu {
     .project-container{
         max-width: 345px;
         width: 100%;
-        background-color: beige;
         position: relative;
     }
 
@@ -531,11 +606,11 @@ ul.menu {
     }
     
     .project-container i:first-child{
-        left: -20px;
+        left: -30px;
     }
     
     .project-container i:last-child{
-        right: -20px;
+        right: -30px;
     }
 
     .card-wrapper{
@@ -605,7 +680,6 @@ ul.menu {
     .project-container{
         max-width: 300px;
         width: 100%;
-        background-color: beige;
         position: relative;
     }
 
@@ -625,11 +699,11 @@ ul.menu {
     }
     
     .project-container i:first-child{
-        left: -20px;
+        left: -30px;
     }
     
     .project-container i:last-child{
-        right: -20px;
+        right: -30px;
     }
 
     .card-wrapper{
@@ -694,7 +768,7 @@ ul.menu {
 .hidden{
     opacity: 0;
     filter: blur(50px);
-    transform: translateY(20%);
+    transform: translateY(70%);
     transition: all 1s;
 }
 
@@ -704,15 +778,21 @@ ul.menu {
     transform: translateY(0);
 }
 
-.project-card:nth-child(2){
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
+.card:nth-child(2){
     transition-delay: 200ms;
 }
 
-.project-card:nth-child(3){
+.card:nth-child(3){
     transition-delay: 400ms;
 }
 
-.project-card:nth-child(4){
+.card:nth-child(4){
     transition-delay: 600ms;
 }
 
