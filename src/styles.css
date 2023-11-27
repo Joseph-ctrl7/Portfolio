@@ -321,7 +321,7 @@ span {
     border-radius: 25px;
     margin: 10px;
     overflow: hidden;
-    background-image: url("../img/map-page.png");
+    background-image: url("./img/map-page.png");
     background-size: cover;
     transition: transform 200ms ease;
 }
