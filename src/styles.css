@@ -136,7 +136,7 @@ a {
 }
 
 .subtext {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 300;
 }
 
@@ -326,6 +326,15 @@ span {
     transition: transform 200ms ease;
 }
 
+#card2{
+    background-image: url("../img/smartmockups_lpre3xsx.jpg");
+    background-size: cover;
+}
+#card3{
+    background-image: url("../img/smartmockups_lprg6tf6.jpg");
+    background-size: cover;
+}
+
 .card:hover, .card:focus-within{
     box-shadow: 0 3px  6px rgba(0,0,0,0.23);
     transform: translateY(-0.5em);
@@ -336,8 +345,9 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 300px;
     padding: 10px 14px;
-    margin-top: 170px;
+    margin-top: 30px;
     color: white;
     background: linear-gradient(
         hsl(0 0% 0% / 0),
