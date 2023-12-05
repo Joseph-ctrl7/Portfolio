@@ -1,9 +1,18 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to bottom, #845ec2, #d65db1, white);
+    /*background-image: linear-gradient(to bottom, #845ec2, #d65db1, white);*/
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
+    background-color:#e7ff99;
+    background-image:
+    radial-gradient(at 53% 8%, hsla(309,82%,64%,1) 0px, transparent 50%),
+    radial-gradient(at 73% 25%, hsla(169,94%,66%,1) 0px, transparent 50%),
+    radial-gradient(at 18% 45%, hsla(154,63%,66%,1) 0px, transparent 50%),
+    radial-gradient(at 62% 51%, hsla(326,93%,79%,1) 0px, transparent 50%),
+    radial-gradient(at 4% 84%, hsla(99,90%,71%,1) 0px, transparent 50%),
+    radial-gradient(at 72% 48%, hsla(184,87%,79%,1) 0px, transparent 50%),
+    radial-gradient(at 37% 59%, hsla(122,89%,79%,1) 0px, transparent 50%);
 }
 
 .header{
