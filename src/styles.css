@@ -4,15 +4,15 @@ body {
     /*background-image: linear-gradient(to bottom, #845ec2, #d65db1, white);*/
     background-attachment: fixed;
     font-family: 'Poppins', sans-serif;
-    background-color:#e7ff99;
+    background-color:#ff99f7;
     background-image:
-    radial-gradient(at 53% 8%, hsla(309,82%,64%,1) 0px, transparent 50%),
-    radial-gradient(at 73% 25%, hsla(169,94%,66%,1) 0px, transparent 50%),
-    radial-gradient(at 18% 45%, hsla(154,63%,66%,1) 0px, transparent 50%),
-    radial-gradient(at 62% 51%, hsla(326,93%,79%,1) 0px, transparent 50%),
-    radial-gradient(at 4% 84%, hsla(99,90%,71%,1) 0px, transparent 50%),
-    radial-gradient(at 72% 48%, hsla(184,87%,79%,1) 0px, transparent 50%),
-    radial-gradient(at 37% 59%, hsla(122,89%,79%,1) 0px, transparent 50%);
+    radial-gradient(at 85% 58%, hsla(246,62%,67%,1) 0px, transparent 50%),
+    radial-gradient(at 33% 96%, hsla(283,65%,63%,1) 0px, transparent 50%),
+    radial-gradient(at 42% 15%, hsla(4,90%,65%,1) 0px, transparent 50%),
+    radial-gradient(at 74% 87%, hsla(201,73%,75%,1) 0px, transparent 50%),
+    radial-gradient(at 90% 26%, hsla(325,77%,68%,1) 0px, transparent 50%),
+    radial-gradient(at 91% 92%, hsla(298,63%,62%,1) 0px, transparent 50%),
+    radial-gradient(at 17% 6%, hsla(309,68%,67%,1) 0px, transparent 50%);
 }
 
 .header{
@@ -128,16 +128,19 @@ footer {
 h1 {
     font-size: 80px;
     margin: 0;
+    color: white;
 }
 
 h2 {
     font-size: 40px;
+    color: white;
 }
 
 p {
     margin: 0;
     font-size: 25px;
     font-weight: 300;
+    color: white;
 }
 
 a {
@@ -294,6 +297,11 @@ span {
     background: white;
 }
 
+
+.project-link:hover{
+    color: #845ec2;
+}
+
  .card-wrapper{
     display: grid;
     grid-auto-flow: column;
@@ -343,6 +351,10 @@ span {
     background-image: url("../img/smartmockups_lprg6tf6.jpg");
     background-size: cover;
 }
+#card4{
+    background-image: url("../img/smartmockups_lptut7gf.jpg");
+    background-size: cover;
+}
 
 .card:hover, .card:focus-within{
     box-shadow: 0 3px  6px rgba(0,0,0,0.23);
@@ -364,29 +376,9 @@ span {
         hsl(0 0% 0% / 1)
     );
     /*border-radius: 25px;*/
-    transform: translateY(60%);
-    transition: transform 500ms ease;
 }
 
-.card-content > *:not(.card-title){
-    opacity: 0;
-    transition: opacity 500ms linear;
-}
 
-.card:hover .card-content > *:not(.card-title),
-.card:focus-within .card-content > *:not(.card-title){
-    opacity: 1;
-    transition-delay: 1000ms;
-}
-
-.card:hover .card-content, .card:focus-within .card-content{
-    transform: translateY(0);
-    transition-delay: 500ms;
-}
-
-.card:focus-within .card-content{
-    transition-duration: 0ms;
-}
 
 .card-title{
     position: relative;
@@ -401,7 +393,6 @@ span {
     bottom: 0;
     width: calc(100% + 1.5rem);
     background: #845ec2;
-    transform: scaleX(0);
     transform-origin: left;
     transition: transform 500ms ease;
 }
@@ -413,6 +404,7 @@ span {
 
 .card-button{
     border: none;
+    text-decoration: none;
     font-size: 16px;
     color: white;
     padding: 8px 16px;
@@ -427,6 +419,37 @@ span {
     cursor: pointer;
     color: #845ec2;
     background-color: white;
+}
+
+@media(hover){
+    .card-content{
+        transform: translateY(60%);
+        transition: transform 500ms ease;
+    }
+
+    .card-content > *:not(.card-title){
+        opacity: 0;
+        transition: opacity 500ms linear;
+    }
+    
+    .card:hover .card-content > *:not(.card-title),
+    .card:focus-within .card-content > *:not(.card-title){
+        opacity: 1;
+        transition-delay: 1000ms;
+    }
+    
+    .card:hover .card-content, .card:focus-within .card-content{
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+    
+    .card:focus-within .card-content{
+        transition-duration: 0ms;
+    }
+
+    .card-title::after{
+        transform: scaleX(0);
+    }
 }
 
 
@@ -593,6 +616,7 @@ span {
 ul.menu {
     display: block;
 }*/
+
 
 
 @media (max-width: 710px) {
