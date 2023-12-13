@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function(){
     function toggleButton() {
         if(hamburgerButton.classList.contains('show')){
             hamburgerButton.classList.remove('show');
-            navList.classList.toggle('menu');
+            nav.classList.toggle('open');
         }else{
             hamburgerButton.classList.add('show');
-            navList.classList.toggle('menu');
+            nav.classList.toggle('open');
         }
     
     }

@@ -20,9 +20,13 @@ body {
     height: 55px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
 }
 
 .logo{
+    padding-top: 30px;
     width: 100px;
     height: 100%;
     color: white;
@@ -30,21 +34,20 @@ body {
 }
 
 nav {
-    /*display: flex;*/
+    display: flex;
     transform: translateY(-70px);
     transition: 0.8s;
-    width: fit-content;
-    height: 100%;
+    width: 100%;
 }
 
 nav .navList{
+    margin-right: 10px;
     list-style-type: none;
-    margin-right: 30px;
-}
-
-nav .navList li{
-    display: inline;
-    float: left;
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 nav .navList li a{
@@ -52,7 +55,9 @@ nav .navList li a{
     color: white;
     text-decoration: none;
     line-height: 5px;
-    display: block;
+    display: flex;
+    position: relative;
+    align-items: center;
     height: 100%;
     border-radius: 40px;
     transition: all 300ms ease-in-out;
@@ -156,19 +161,6 @@ a {
     display: none;
 }
 
-span {
-    display: block;
-    width: 30px;
-    height: 5px;
-    border-radius: 4px;
-    background-color: white;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin-right: 7px;
-    transition: all 300ms ease-in-out;
-    transform-origin: 1px 3px;
-}
-
 .hero-area {
     display: flex;
     height: 100%;
@@ -181,7 +173,7 @@ span {
 
 .hero-text {
     margin-left: 80px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
     padding-top: 150px;
 }
 
@@ -190,7 +182,7 @@ span {
     padding-top: 30px;
 }
 
-.button a{
+.button{
     width: 100px;
     height: 35px;
     font-weight: 300;
@@ -205,24 +197,10 @@ span {
     transition: opacity 300ms ease-in-out; */
     transition: all 150ms ease-in-out;
     text-decoration: none;
-    color: white;
-}
-
-
-.button a:hover {
-    cursor: pointer;
-    text-align: center;
-    color: #845ec2;
-    background-color: white;
-    /* opacity: 0.75; */
-}
-.button a:active{
-    background-color: darkgray;
-    color: #808080;
 }
 
 .socials {
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 
 .social {
@@ -231,11 +209,6 @@ span {
     border-radius: 50%;
     margin: 20px;
     transition: all 150ms ease-in-out;
-}
-
-.social:hover{
-    box-shadow: 0 3px  6px rgba(0,0,0,0.23);
-    transform: translateY(-0.1em);
 }
 
 #about-me {
@@ -290,16 +263,6 @@ span {
 
 .project-container i:last-child{
     right: -30px;
-}
-
-.project-container i:hover{
-    color: #845ec2;
-    background: white;
-}
-
-
-.project-link:hover{
-    color: #845ec2;
 }
 
  .card-wrapper{
@@ -415,13 +378,25 @@ span {
     transition: all 150ms ease-in-out;
 }
 
-.card-button:hover{
-    cursor: pointer;
-    color: #845ec2;
-    background-color: white;
-}
-
 @media(hover){
+    .button:hover {
+        cursor: pointer;
+        text-align: center;
+        color: #845ec2;
+        background-color: white;
+        /* opacity: 0.75; */
+    }
+
+    .social:hover{
+        box-shadow: 0 3px  6px rgba(0,0,0,0.23);
+        transform: translateY(-0.1em);
+    }
+
+    .project-container i:hover{
+        color: #845ec2;
+        background: white;
+    }
+
     .card-content{
         transform: translateY(60%);
         transition: transform 500ms ease;
@@ -449,6 +424,12 @@ span {
 
     .card-title::after{
         transform: scaleX(0);
+    }
+
+    .card-button:hover{
+        cursor: pointer;
+        color: #845ec2;
+        background-color: white;
     }
 }
 
@@ -621,11 +602,39 @@ ul.menu {
 
 @media (max-width: 710px) {
     
-    .hamburger {
+    .hamburger{
+        position: absolute;
+        z-index: 9999;
         display: block;
-        margin: 20px;
-        align-self: flex-end;
+        top: 20px;
+        right: 15px;
     }
+
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        border-radius: 4px;
+        background-color: white;
+        margin-bottom: 5px;
+        margin-top: 7px;
+        margin-right: 7px;
+        transition: all 300ms ease-in-out;
+        transform-origin: 1px 3px;
+    }
+    
+    .header .hamburger.show  > span:first-child {
+        transform: rotate(45deg);
+    }
+    
+    .header .hamburger.show  > span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .header .hamburger.show  > span:last-child {
+        transform: rotate(-45deg);
+    }
+    
 
     .project-container{
         max-width: 345px;
@@ -699,27 +708,109 @@ ul.menu {
         font-size: 1.25rem;
     }
 
-    .logo {
-        display: none;
-    }
-
     .button {
         width: 8rem;
         height: 1.875rem;
         font-size: 1rem;
     }
 
-    .button:hover {
-        background-color: white;
-        color: blue;
-        cursor: pointer;
-        font-size: 18px;
-        text-align: center;
-         opacity: 0.75; 
+    .button:active{
+        color: white;
+        background-color: #845ec2;
     }
+
 }
 
 @media (max-width: 450px){
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    nav{
+        height: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: black;
+        transition: all 300ms ease-in-out;
+        overflow: hidden;
+    }
+
+    .open{
+        height: 450px;
+    }
+
+    nav .navList{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: all 300ms ease-in-out;
+        opacity: 0;
+    }
+    .open .navList{
+        opacity: 1;
+    }
+    nav .navList li a{
+        margin-bottom: 12px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .hamburger{
+        position: absolute;
+        z-index: 9999;
+        display: block;
+        top: 10px;
+        right: 12px;
+    }
+
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        border-radius: 4px;
+        background-color: white;
+        margin-bottom: 5px;
+        margin-top: 7px;
+        margin-right: 7px;
+        transition: all 300ms ease-in-out;
+        transform-origin: 1px 3px;
+    }
+    
+    .header .hamburger.show  > span:first-child {
+        transform: rotate(45deg);
+    }
+    
+    .header .hamburger.show  > span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .header .hamburger.show  > span:last-child {
+        transform: rotate(-45deg);
+    }
+    
+
+    
+    .hero-text {
+        margin-left: 30px;
+        margin-bottom: 200px;
+        padding-top: 50px;
+    }
+    
+    .hero-text p {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
     .project-container{
         max-width: 300px;
         width: 100%;
@@ -769,6 +860,7 @@ ul.menu {
         margin: 10px;
         background-color: #808080;
     }
+
 }
 
 
