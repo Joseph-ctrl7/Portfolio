@@ -69,25 +69,9 @@ nav .navList li a:hover{
     background-color: white;
 }
 
-/*
-nav #navList{
-    list-style-type: none;
-    margin-left: 5px;
-	margin-right: 5px;
-    padding: 10px;
-	overflow: hidden;
-    display: flex;
-}
-
-nav a{
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    padding: 8px;
-}*/
-
 
 section {
+    display: grid;
     height: 100vh;
     /*background-color: white;*/
 }
@@ -104,31 +88,6 @@ footer {
     text-align: center;
     padding: 80px;
 }
-
-/*#navList {
-    display: flex;
-    list-style-type: none;
-    /*width: 500px;
-    justify-content: space-around;
-    font-size: 15px;
-}
-
-
-#navList li a{
-    /*width: 200px;
-    color: white;
-    text-decoration: none;
-    transition: all 300ms ease-in-out;
-    padding: 5px 16px;
-    border-radius: 40px;
-}
-
-
-#navList li a:hover{
-    cursor: pointer;
-    color: #845ec2;
-    background-color: white;
-}*/
 
 h1 {
     font-size: 80px;
@@ -212,12 +171,53 @@ a {
 }
 
 #about-me {
-    display: flex;
-    justify-content: space-around;
+    display: block;
+    justify-content: center;
     align-content: center;
-    margin: 80px;
-    padding-top: 150px;
+    padding: 150px 50px 50px 50px;
+    height: 1000px
+    
 }
+
+.bentogrid{
+    display: grid;
+    margin-inline: auto;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    grid-auto-rows: 240px;
+}
+
+.bentocard{
+    color: #845ec2;
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms;
+}
+
+.grid1{
+    grid-column: span 2 / auto;
+    transition-delay: 300ms;
+}
+.grid2{
+    grid-row: span 2 /auto;
+    transition-delay: 400ms;
+}
+.grid3{
+    transition-delay: 500ms;
+}
+.grid4{
+    transition-delay: 600ms;
+}
+.grid5{
+    grid-column: span 3 / auto;
+    transition-delay: 700ms;
+}
+
 
 
 .subsection-alternative {
@@ -277,6 +277,7 @@ a {
     margin-left: 30px;
     margin-right: 30px;
     padding: 0;
+    transition: all 1s;
 }
 
 .card-wrapper::-webkit-scrollbar {
@@ -303,7 +304,6 @@ a {
     overflow: hidden;
     background-image: url("../img/smartmockups.jpg");
     background-size: cover;
-    transition: transform 200ms ease;
 }
 
 #card2{
@@ -474,12 +474,52 @@ a {
     }
 
     #about-me {
-        display: flex;
-        justify-content: space-around;
-        margin-left: 80px;
-        margin-bottom: 200px;
-        padding-top: 150px;
+        display: block;
+        justify-content: center;
+        align-content: center;
+        padding: 200px 50px 50px 50px;
+        height: 1000px
     }
+
+    .bentogrid{
+        display: grid;
+        margin-inline: auto;
+        gap: 1rem;
+        grid-template-columns: repeat(3, minmax(240px, 1fr));
+        grid-auto-rows: 240px;
+    }
+    
+    .bentocard{
+        color: #845ec2;
+        background-color: white;
+        border: 3px solid white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 200ms;
+    }
+    
+    .grid1{
+        grid-column: span 2 / auto;
+        transition-delay: 300ms;
+    }
+    .grid2{
+        grid-row: span 2 /auto;
+        transition-delay: 400ms;
+    }
+    .grid3{
+        transition-delay: 500ms;
+    }
+    .grid4{
+        transition-delay: 600ms;
+    }
+    .grid5{
+        grid-column: span 3 / auto;
+        transition-delay: 700ms;
+    }
+    
 
     .project-container{
         max-width: 650px;
@@ -547,60 +587,57 @@ a {
     
 }
 
+@media (max-width: 850px){
+    #about-me {
+        display: block;
+        justify-content: center;
+        align-content: center;
+        padding: 200px 50px 50px 50px;
+        height: 1000px
+    }
 
+    .bentogrid{
+        display: grid;
+        margin-inline: auto;
+        gap: 1rem;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-auto-rows: 200px;
+    }
     
-/*
-hr {
-    margin-left: 20px;
-    margin-right: 20px;
+    .bentocard{
+        color: #845ec2;
+        background-color: white;
+        border: 3px solid white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 200ms;
+    }
+    
+    .grid1{
+        grid-column: span 2 / auto;
+        transition-delay: 300ms;
+    }
+    .grid2{
+        grid-row: span 2 /auto;
+        transition-delay: 400ms;
+    }
+    .grid3{
+        transition-delay: 500ms;
+    }
+    .grid4{
+        transition-delay: 600ms;
+    }
+    .grid5{
+        grid-column: span 3 / auto;
+        transition-delay: 700ms;
+    }
+
 }
 
-.project-link {
-    text-decoration: none;
-    color: aquamarine;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.hamburger {
-    display: none;
-}
-
-span {
-    display: block;
-    width: 30px;
-    height: 5px;
-    border-radius: 4px;
-    background-color: white;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin-right: 7px;
-    transition: all 300ms ease-in-out;
-    transform-origin: 1px 3px;
-}
-
-.header .hamburger.show  > span:first-child {
-    transform: rotate(45deg);
-}
-
-.header .hamburger.show  > span:nth-child(2) {
-    opacity: 0;
-}
-
-.header .hamburger.show  > span:last-child {
-    transform: rotate(-45deg);
-}
-
-ul.menu {
-    display: block;
-}*/
-
-
-
-@media (max-width: 710px) {
+@media (max-width: 760px) {
     nav{
         height: 0px;
         position: absolute;
@@ -666,6 +703,55 @@ ul.menu {
     .header .hamburger.show  > span:last-child {
         transform: rotate(-45deg);
     }
+
+    #about-me {
+        display: block;
+        justify-content: center;
+        align-content: center;
+        padding: 100px 50px 50px 50px;
+    }
+
+    .bentogrid{
+        display: grid;
+        margin-inline: auto;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-auto-rows: 200px;
+    }
+    
+    .bentocard{
+        color: #845ec2;
+        background-color: white;
+        border: 3px solid white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 200ms;
+    }
+    
+    .grid1{
+        grid-column: span 2 / auto;
+        transition-delay: 300ms;
+    }
+    .grid2{
+        grid-column: span 2 /auto;
+        grid-row: span 1 / auto;
+        transition-delay: 400ms;
+    }
+    .grid3{
+        transition-delay: 500ms;
+    }
+    .grid4{
+        transition-delay: 600ms;
+    }
+    .grid5{
+        grid-column: span 2 / auto;
+        transition-delay: 700ms;
+    }
+    
+
     
 
     .project-container{
@@ -753,7 +839,7 @@ ul.menu {
 
 }
 
-@media (max-width: 450px){
+@media (max-width: 510px){
     h1 {
         font-size: 50px;
     }
@@ -840,6 +926,57 @@ ul.menu {
         padding-top: 30px;
     }
 
+    #about-me {
+        display: block;
+        justify-content: center;
+        align-content: center;
+        padding: 100px 50px 50px 50px;
+        height: 1300px;
+    }
+
+    .bentogrid{
+        display: grid;
+        margin-inline: auto;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-auto-rows: 200px;
+    }
+    
+    .bentocard{
+        color: #845ec2;
+        background-color: white;
+        border: 3px solid white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 200ms;
+    }
+    
+    .grid1{
+        grid-column: span 2 / auto;
+        transition-delay: 300ms;
+    }
+    .grid2{
+        grid-column: span 2 /auto;
+        grid-row: span 1 / auto;
+        transition-delay: 400ms;
+    }
+    .grid3{
+        grid-column: span 2 /auto;
+        transition-delay: 500ms;
+    }
+    .grid4{
+        grid-column: span 2 /auto;
+        transition-delay: 600ms;
+    }
+    .grid5{
+        grid-column: span 2 / auto;
+        transition-delay: 700ms;
+    }
+    
+
     .project-container{
         max-width: 300px;
         width: 100%;
@@ -892,6 +1029,61 @@ ul.menu {
 
 }
 
+@media (max-width: 384px){
+    #about-me {
+        display: block;
+        justify-content: center;
+        align-content: center;
+        padding: 100px 50px 50px 50px;
+    }
+
+    .bentogrid{
+        display: grid;
+        margin-inline: auto;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-auto-rows: 100px;
+    }
+    
+    .bentocard{
+        color: #845ec2;
+        background-color: white;
+        border: 3px solid white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 200ms;
+    }
+    
+    .grid1{
+        grid-column: span 2 / auto;
+        grid-row: span 2 / auto;
+        transition-delay: 300ms;
+    }
+    .grid2{
+        grid-column: span 2 / auto;
+        grid-row: span 2 / auto;
+        transition-delay: 400ms;
+    }
+    .grid3{
+        grid-column: span 2 /auto;
+        grid-row: span 2 / auto;
+        transition-delay: 500ms;
+    }
+    .grid4{
+        grid-column: span 2 /auto;
+        grid-row: span 2 / auto;
+        transition-delay: 600ms;
+    }
+    .grid5{
+        grid-column: span 2 / auto;
+        grid-row: span 2 / auto;
+        transition-delay: 700ms;
+    }
+}
+
 
 
 /* animations */
@@ -932,20 +1124,14 @@ ul.menu {
 .hidden{
     opacity: 0;
     filter: blur(50px);
-    transform: translateY(70%);
-    transition: all 1s;
+    transform: translateY(10%);
+    /*transition: all 1s;*/
 }
 
 .show{
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
-}
-
-@media(prefers-reduced-motion){
-    .hidden{
-        transition: none;
-    }
 }
 
 .card:nth-child(2){
@@ -960,9 +1146,13 @@ ul.menu {
     transition-delay: 600ms;
 }
 
-.about-me-text:nth-child(2){
-    transition-delay: 200ms;
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
 }
+
+
 
 
 

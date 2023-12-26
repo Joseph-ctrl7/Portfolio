@@ -18,7 +18,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-me">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
         <a id="hamburger" class="hamburger">
@@ -37,7 +37,7 @@
             </div>
             <div class="socials">
                 <div class="social">
-                    <a href="www.linkedin.com/in/josephanyia" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg></a>
+                    <a href="https://www.linkedin.com/in/josephanyia" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg></a>
                 </div>
                 <div class="social">
                     <a href="https://github.com/Joseph-ctrl7" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 6c-3.313 0-6 2.686-6 6 0 2.651 1.719 4.9 4.104 5.693.3.056.396-.13.396-.289v-1.117c-1.669.363-2.017-.707-2.017-.707-.272-.693-.666-.878-.666-.878-.544-.373.041-.365.041-.365.603.042.92.619.92.619.535.917 1.403.652 1.746.499.054-.388.209-.652.381-.802-1.333-.152-2.733-.667-2.733-2.965 0-.655.234-1.19.618-1.61-.062-.153-.268-.764.058-1.59 0 0 .504-.161 1.65.615.479-.133.992-.199 1.502-.202.51.002 1.023.069 1.503.202 1.146-.776 1.648-.615 1.648-.615.327.826.121 1.437.06 1.588.385.42.617.955.617 1.61 0 2.305-1.404 2.812-2.74 2.96.216.186.412.551.412 1.111v1.646c0 .16.096.347.4.288 2.383-.793 4.1-3.041 4.1-5.691 0-3.314-2.687-6-6-6z"/></svg></a>
@@ -46,23 +46,32 @@
         </div>
     </section>
     <section id="about-me">
-        <div class="information">
-            <h2 class="about-me-header hidden">About Me</h2>
-            <p class="about-me-text hidden">
-                Hello! My name is Joseph Anyia. I am a Software Engineering student who is aspiring to become a software
-                 developer and a front end web developer
-            </p>
+        <!--<div class="information">
+            <h2 class="about-me-header">About Me</h2>
+            <div class="bentogrid">
+                <div class="bentocard grid1">1</div>
+                <div class="bentocard grid2">2</div>
+                <div class="bentocard grid3">3</div>
+                <div class="bentocard grid4">4</div>
+                <div class="bentocard grid5">5</div>
+            </div>
+        </div>-->
+        <h2>About Me</h2>
+        <div class="bentogrid">
+            <div class="bentocard grid1 hidden">1</div>
+            <div class="bentocard grid2 hidden">2</div>
+            <div class="bentocard grid3 hidden">3</div>
+            <div class="bentocard grid4 hidden">4</div>
+            <div class="bentocard grid5 hidden">5</div>
         </div>
-        <div class="about-me-image-container"></div>
     </section>
 
     <section id="projects" class="subsection-alternative">
-        <h2 class="hidden">Projects</h2>
-        <div class="project-container hidden">
+        <h2>Projects</h2>
+        <div class="project-container">
             <i id = "left" class="fa-solid fa-angle-left"></i>
-            <ul class="card-wrapper">
+            <ul class="card-wrapper hidden">
                 <li class="card">
-
                     <div class="card-content">
                         <h3 class="card-title">Yet Another Travel Map</h3>
                         <p class="subtext">A travel map companion which allows users record and keep track of their travel information</p>
@@ -71,7 +80,6 @@
                     </div>
                 </li>
                 <li id="card2" class="card">
-
                     <div class="card-content">
                         <h3 class="card-title">Elevator Simulator</h3>
                         <p class="subtext">An elevator control system and simulator that manages elevators, and floor requests in a simulated building</p>
@@ -81,7 +89,6 @@
                     </div>
                 </li>
                 <li id="card3" class="card">
-
                      <div class="card-content">
                         <h3 class="card-title">The Amazing Bookstore</h3>
                         <p class="subtext">A web application which mimicks an online bookstore. The major focus of this is to build the web application</p>
@@ -91,7 +98,6 @@
                     </div>
                 </li>
                 <li id="card4" class="card">
-
                     <div class="card-content">
                         <h3 class="card-title">RISK!</h3>
                         <p class="subtext">This project includes....</p>
@@ -101,40 +107,6 @@
             </ul>
             <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
-            <!--
-            <i class="fa-solid fa-angle-left"></i>
-            <div class="carousel">
-                <div class="project-card hidden">
-                    <img class="project-image" src="" alt="Project One Image">
-                    <h3>Project One</h3>
-                    <p class="subtext">This project includes....</p>
-                    <hr/>
-                    <p class="subtext"><a class= "project-link" href="">View Here</a></p>
-                </div>
-                <div class="project-card hidden">
-                    <img class="project-image" src="" alt="Project Two Image">
-                    <h3>Project Two</h3>
-                    <p class="subtext">This project includes....</p>
-                    <hr/>
-                    <p class="subtext">View Here</p>
-                </div>
-                <div class="project-card hidden">
-                    <img class="project-image" src="" alt="Project Three Image">
-                    <h3>Project Three</h3>
-                    <p class="subtext">This project includes....</p>
-                    <hr/>
-                    <p class="subtext">View Here</p>
-                </div>
-                <div class="project-card hidden">
-                    <img class="project-image" src="" alt="Project Four Image">
-                    <h3>Project Four</h3>
-                    <p class="subtext">This project includes....</p>
-                    <hr/>
-                    <p class="subtext">View Here</p>
-                </div>
-            </div>
-            <i class="fa-solid fa-angle-right"></i>
-        </div> -->
     </section>
 
     <footer id="contacts">
