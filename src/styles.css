@@ -659,7 +659,7 @@ a {
         display: block;
         width: fit-content;
         margin: 100px auto 0 auto;
-        padding: 40px;
+        padding: 4cqw;
         text-align: center;
         transition: all 300ms ease-in-out;
         opacity: 0;
@@ -670,6 +670,7 @@ a {
     nav .navList li a{
         margin-bottom: 50px;
         color: black;
+        font-size: large;
     }
 
 
@@ -871,7 +872,7 @@ a {
     nav .navList{
         display: block;
         width: fit-content;
-        margin: 200px auto 0 auto;
+        margin: 100px auto 0 auto;
         padding: 40px;
         text-align: center;
         transition: all 300ms ease-in-out;
@@ -883,6 +884,7 @@ a {
     nav .navList li a{
         margin-bottom: 100px;
         color: black;
+        font-size: large;
     }
 
 
