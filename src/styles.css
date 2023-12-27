@@ -304,6 +304,7 @@ a {
     overflow: hidden;
     background-image: url("../img/smartmockups.jpg");
     background-size: cover;
+    transition: all 500ms;
 }
 
 #card2{
