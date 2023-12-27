@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const header = document.querySelector('.header');
     const card_wrapper = document.querySelector(".card-wrapper");
     const arrowBtns = document.querySelectorAll(".project-container i");
+    const hamburgerMenuItems = document.querySelectorAll(".menu-item");
 
 
     //function for hamburger menu animation
@@ -18,8 +19,21 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     
     }
-
     hamburgerButton.addEventListener('click', toggleButton);
+
+    //toggle after hamburger link is clicked
+    function closeMenu(){
+        if(hamburgerButton.classList.contains('show')){
+            hamburgerButton.classList.remove('show');
+            nav.classList.toggle('open');
+        }else{
+            hamburgerButton.classList.add('show');
+            nav.classList.toggle('open');
+        }
+    }
+    hamburgerMenuItems.forEach(item => {
+        item.addEventListener('click', closeMenu)
+    })
 
     //function to observe pages for transition animations
     const observer = new IntersectionObserver((entries) => {

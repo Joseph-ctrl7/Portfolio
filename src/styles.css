@@ -645,19 +645,21 @@ a {
         left: 0;
         right: 0;
         width: 100vw;
-        background: black;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
         transition: all 300ms ease-in-out;
         overflow: hidden;
     }
 
     .open{
-        height: 450px;
+        height: 100vh;
     }
 
     nav .navList{
         display: block;
         width: fit-content;
-        margin: 80px auto 0 auto;
+        margin: 100px auto 0 auto;
+        padding: 40px;
         text-align: center;
         transition: all 300ms ease-in-out;
         opacity: 0;
@@ -666,7 +668,8 @@ a {
         opacity: 1;
     }
     nav .navList li a{
-        margin-bottom: 12px;
+        margin-bottom: 50px;
+        color: black;
     }
 
 
@@ -855,19 +858,21 @@ a {
         left: 0;
         right: 0;
         width: 100vw;
-        background: black;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
         transition: all 300ms ease-in-out;
         overflow: hidden;
     }
 
     .open{
-        height: 450px;
+        height: 100vh;
     }
 
     nav .navList{
         display: block;
         width: fit-content;
-        margin: 80px auto 0 auto;
+        margin: 200px auto 0 auto;
+        padding: 40px;
         text-align: center;
         transition: all 300ms ease-in-out;
         opacity: 0;
@@ -876,7 +881,8 @@ a {
         opacity: 1;
     }
     nav .navList li a{
-        margin-bottom: 12px;
+        margin-bottom: 100px;
+        color: black;
     }
 
 
