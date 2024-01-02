@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
@@ -230,13 +233,15 @@ a {
 }
 .grid2 .bentoheader{
     top: 10px;
-    width: 100%;
+    width: 180px;
     font-size: medium;
-    color: #845ec2;
-    left: 75%;
+    background-color: white;
+    color:black;
+    left: 50%;
     transform: translateX(-50%);
     position:absolute;
     z-index: 1;
+    mix-blend-mode:screen;
 }
 .grid2 .slider-container{
     max-width: 292.9px;
@@ -267,7 +272,7 @@ a {
     border-radius: 25px;
     margin: 0px;
     overflow: hidden;
-    background-image: url("../img/innovapostdesign.png");
+   background-image: url("../img/innovapostdesign.png");
     background-size: cover;
     transition: all 500ms;
 }
@@ -822,7 +827,7 @@ a {
     }
 
     .open{
-        height: 100vh;
+        height: 1000px;
     }
 
     nav .navList{
@@ -1057,7 +1062,6 @@ a {
     }
 
     nav{
-        height: 0px;
         position: absolute;
         top: 0;
         left: 0;
@@ -1070,7 +1074,7 @@ a {
     }
 
     .open{
-        height: 100vh;
+        height: 1000px;
     }
 
     nav .navList{
