@@ -188,10 +188,16 @@ a {
     grid-auto-rows: 240px;
 }
 
-.bentotext{
+.grid1text{
     padding: 30px;
     font-size: small;
     color: #845ec2;
+}
+.grid2text{
+    margin-top: 200px;
+    padding: 30px;
+    font-size: small;
+    color:#845ec2;
 }
 
 .bentocard{
@@ -202,16 +208,35 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 3px  6px rgba(0,0,0,0.23);
     transition: all 200ms;
 }
 
 .grid1{
     grid-column: span 2 / auto;
+    background-color:hsla(328,8%,98%,1);
+    background-image:
+    radial-gradient(at 96% 2%, hsla(303,80%,90%,1) 0px, transparent 50%),
+    radial-gradient(at 33% 83%, hsla(284,26%,98%,1) 0px, transparent 50%);
     transition-delay: 300ms;
 }
 .grid2{
     grid-row: span 2 /auto;
     transition-delay: 400ms;
+}
+.grid2 .bentotext{
+    top: 0px;
+    margin-bottom: 100px;
+}
+.grid2 .bentoheader{
+    top: 10px;
+    width: 100%;
+    font-size: medium;
+    color: #845ec2;
+    left: 75%;
+    transform: translateX(-50%);
+    position:absolute;
+    z-index: 1;
 }
 .grid2 .slider-container{
     max-width: 292.9px;
@@ -242,9 +267,15 @@ a {
     border-radius: 25px;
     margin: 0px;
     overflow: hidden;
-    background-image: url("../img/smartmockups.jpg");
+    background-image: url("../img/innovapostdesign.png");
     background-size: cover;
     transition: all 500ms;
+}
+#slide2{
+    height: 496px;
+    width: 292.9px;
+    background-image: url("../img/metro.png");
+    background-size: cover;
 }
 .slider-wrapper::-webkit-scrollbar {
     display: none;
@@ -270,7 +301,7 @@ a {
    width: 0.5rem;
    height: 0.5rem;
    border-radius: 50%;
-   background-color: white;
+   background-color:#845ec2;
    opacity: 0.75;
    transition: opacity ease 250ms; 
 }
@@ -284,11 +315,6 @@ a {
 .grid5{
     grid-column: span 3 / auto;
     transition-delay: 700ms;
-}
-
-.grid2 .bentotext{
-    top: 0px;
-    margin-bottom: 100px;
 }
 
 
@@ -615,7 +641,7 @@ a {
         border-radius: 25px;
         margin: 0px;
         overflow: hidden;
-        background-image: url("../img/smartmockups.jpg");
+        background-image: url("../img/innovapostdesign.png");
         background-size: cover;
         transition: all 500ms;
     }
@@ -763,7 +789,7 @@ a {
         border-radius: 25px;
         margin: 0px;
         overflow: hidden;
-        background-image: url("../img/smartmockups.jpg");
+        background-image: url("../img/innovapostdesign.png");
         background-size: cover;
         transition: all 500ms;
     }
@@ -916,7 +942,7 @@ a {
         border-radius: 25px;
         margin: 0px;
         overflow: hidden;
-        background-image: url("../img/smartmockups.jpg");
+        background-image: url("../img/innovapostdesign.png");
         background-size: cover;
         transition: all 500ms;
     }
@@ -1036,7 +1062,7 @@ a {
         top: 0;
         left: 0;
         right: 0;
-        width: 100vw;
+        width: 100%;
         background-color: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(10px);
         transition: all 300ms ease-in-out;
@@ -1184,7 +1210,7 @@ a {
         border-radius: 25px;
         margin: 0px;
         overflow: hidden;
-        background-image: url("../img/smartmockups.jpg");
+        background-image: url("../img/innovapostdesign.png");
         background-size: cover;
         transition: all 500ms;
     }
@@ -1320,7 +1346,7 @@ a {
         border-radius: 25px;
         margin: 0px;
         overflow: hidden;
-        background-image: url("../img/smartmockups.jpg");
+        background-image: url("../img/innovapostdesign.png");
         background-size: cover;
         transition: all 500ms;
     }
