@@ -191,18 +191,6 @@ a {
     grid-auto-rows: 240px;
 }
 
-.grid1text{
-    padding: 30px;
-    font-size: small;
-    color: #845ec2;
-}
-.grid2text{
-    margin-top: 200px;
-    padding: 30px;
-    font-size: small;
-    color:#845ec2;
-}
-
 .bentocard{
     color: #845ec2;
     background-color: white;
@@ -232,16 +220,26 @@ a {
     margin-bottom: 100px;
 }
 .grid2 .bentoheader{
-    top: 10px;
-    width: 180px;
-    font-size: medium;
-    background-color: white;
+    top: 45px;
+    width: 260px;
     color:black;
-    left: 50%;
+    font-size: larger;
+    font-weight: 150;
+    left: 65%;
     transform: translateX(-50%);
-    position:absolute;
+    position:fixed;
     z-index: 1;
-    mix-blend-mode:screen;
+}
+.grid1text{
+    padding: 30px;
+    font-size: small;
+    color: black;
+}
+.grid2text{
+    margin-top: 200px;
+    padding: 30px;
+    font-size: small;
+    color: black;
 }
 .grid2 .slider-container{
     max-width: 292.9px;
@@ -272,7 +270,7 @@ a {
     border-radius: 25px;
     margin: 0px;
     overflow: hidden;
-   background-image: url("../img/innovapostdesign.png");
+    background-image: url("../img/innovapostdesign.png");
     background-size: cover;
     transition: all 500ms;
 }
@@ -300,14 +298,14 @@ a {
     bottom: 1.25rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 10;
 }
 .slider-nav a{
    width: 0.5rem;
    height: 0.5rem;
    border-radius: 50%;
-   background-color:#845ec2;
-   opacity: 0.75;
+   background-color: black;
+   opacity: 0.5;
    transition: opacity ease 250ms; 
 }
 
@@ -650,6 +648,12 @@ a {
         background-size: cover;
         transition: all 500ms;
     }
+    #slide2{
+        height: 496px;
+        width: 270.45px;
+        background-image: url("../img/metro.png");
+        background-size: cover;
+    }
 
     .grid3{
         transition-delay: 500ms;
@@ -798,6 +802,12 @@ a {
         background-size: cover;
         transition: all 500ms;
     }
+    #slide2{
+        height: 416px;
+        width: 233.12px;
+        background-image: url("../img/metro.png");
+        background-size: cover;
+    }
 
     .grid3{
         transition-delay: 500ms;
@@ -914,12 +924,65 @@ a {
         transition-delay: 300ms;
     }
     .grid2{
-        grid-column: span 2 /auto;
+        grid-column: span 1 /auto;
         grid-row: span 2 / auto;
         transition-delay: 400ms;
     }
+    .grid2 .bentotext{
+        top: 0px;
+        margin-bottom: 100px;
+    }
+    .grid2 .bentoheader{
+        top: 45px;
+        width: 260px;
+        color:black;
+        font-size: larger;
+        font-weight: 150;
+        left: 65%;
+        transform: translateX(-50%);
+        position:fixed;
+        z-index: 1;
+    }
+    .grid1text{
+        padding: 30px;
+        font-size: small;
+        color: black;
+    }
+    .grid2text{
+        margin-top: 200px;
+        padding: 30px;
+        font-size: small;
+        color: black;
+    }
+    .grid2 .bentotext{
+        top: 0px;
+        margin-bottom: 100px;
+    }
+    .grid2 .bentoheader{
+        top: 25px;
+        width: 150px;
+        color:black;
+        font-size: 13px;
+        font-weight: 150;
+        left: 50%;
+        transform: translateX(-50%);
+        position:fixed;
+        z-index: 1;
+    }
+    .grid1text{
+        padding: 30px;
+        font-size: small;
+        color: black;
+    }
+    .grid2text{
+        margin-top: 200px;
+        margin-left: 30px;
+        width: 200px;
+        font-size: 0.7rem;
+        color: black;
+    }
     .grid2 .slider-container{
-        max-width: 641.33px;
+        max-width: 303.67px;
         height: 416px;
         margin: 0;
         width: 100%;
@@ -929,7 +992,7 @@ a {
     .grid2 .slider-wrapper{
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: 641.33px;
+        grid-auto-columns: 303.67px;
         border-radius: 25px;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -942,7 +1005,7 @@ a {
     .slider-wrapper .slide{
         scroll-snap-align: start;
         height: 416px;
-        width: 641.33px;
+        width: 303.67px;
         list-style: none;
         border-radius: 25px;
         margin: 0px;
@@ -1185,6 +1248,32 @@ a {
         grid-row: span 1 / auto;
         transition-delay: 400ms;
     }
+    .grid2 .bentotext{
+        top: 0px;
+        margin-bottom: 100px;
+    }
+    .grid2 .bentoheader{
+        top: 15px;
+        width: 260px;
+        color:black;
+        font-size: 15px;
+        font-weight: 150;
+        left: 70%;
+        transform: translateX(-50%);
+        position:fixed;
+        z-index: 1;
+    }
+    .grid1text{
+        padding: 30px;
+        font-size: 10px;
+        color: black;
+    }
+    .grid2text{
+        margin-top: 200px;
+        padding: 30px;
+        font-size: small;
+        color: black;
+    }
     .grid2 .slider-container{
         max-width: 393.33px;
         height: 200px;
@@ -1217,6 +1306,12 @@ a {
         background-image: url("../img/innovapostdesign.png");
         background-size: cover;
         transition: all 500ms;
+    }
+    #slide2{
+        height: 200px;
+        width: 393.33px;
+        background-image: url("../img/metro.png");
+        background-size: cover;
     }
 
     .grid3{
@@ -1321,6 +1416,32 @@ a {
         grid-row: span 2 / auto;
         transition-delay: 400ms;
     }
+    .grid2 .bentotext{
+        top: 0px;
+        margin-bottom: 100px;
+    }
+    .grid2 .bentoheader{
+        top: 25px;
+        width: 260px;
+        color:black;
+        font-size: 12px;
+        font-weight: 150;
+        left: 80%;
+        transform: translateX(-50%);
+        position:fixed;
+        z-index: 1;
+    }
+    .grid1text{
+        padding: 30px;
+        font-size: 9.5px;
+        color: black;
+    }
+    .grid2text{
+        margin-top: 200px;
+        padding: 30px;
+        font-size: small;
+        color: black;
+    }
     .grid2 .slider-container{
         max-width: 267.33px;
         height: 216px;
@@ -1353,6 +1474,12 @@ a {
         background-image: url("../img/innovapostdesign.png");
         background-size: cover;
         transition: all 500ms;
+    }
+    #slide2{
+        height: 216px;
+        width: 267.33px;
+        background-image: url("../img/metro.png");
+        background-size: cover;
     }
 
     .grid3{

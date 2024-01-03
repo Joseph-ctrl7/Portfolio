@@ -86,4 +86,5 @@ document.addEventListener('DOMContentLoaded', function(){
             card_wrapper.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
         })
     })
+
 });
