@@ -230,7 +230,7 @@ a {
     color: black;
 }
 .grid2text{
-    margin-top: 200px;
+    margin: 200px 0 0 0;
     padding: 30px;
     font-size: small;
     color: black;
@@ -765,6 +765,25 @@ a {
         align-items: center;
         transition: all 200ms;
     }
+
+    .grid2 .bentoheader{
+        top: 25px;
+        width: 150px;
+        color:black;
+        font-size: 15px;
+        font-weight: 150;
+        left: 50%;
+        transform: translateX(-50%);
+        position:fixed;
+        z-index: 1;
+    }
+    .grid2text{
+        margin: 200px 0 0 20px;
+        padding: 0px;
+        width: 200px;
+        font-size: 11px;
+        color: black;
+    }
     
     .grid1{
         grid-column: span 2 / auto;
@@ -775,7 +794,7 @@ a {
         transition-delay: 400ms;
     }
     .grid2 .slider-container{
-        max-width: 233.12px;
+        max-width: 212.45px;
         height: 416px;
         margin: 0;
         width: 100%;
@@ -785,7 +804,7 @@ a {
     .grid2 .slider-wrapper{
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: 233.12px;
+        grid-auto-columns: 212.45px;
         border-radius: 25px;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -798,7 +817,7 @@ a {
     .slider-wrapper .slide{
         scroll-snap-align: start;
         height: 416px;
-        width: 233.12px;
+        width: 212.45px;
         list-style: none;
         border-radius: 25px;
         margin: 0px;
@@ -812,7 +831,7 @@ a {
     }
     #slide2{
         height: 416px;
-        width: 233.12px;
+        width: 212.45px;
         background-image: url("../img/metro.png");
         background-size: cover;
         background-position: center center;
@@ -943,17 +962,13 @@ a {
         top: 0px;
         margin-bottom: 100px;
     }
-    .grid2 .bentotext{
-        top: 0px;
-        margin-bottom: 100px;
-    }
     .grid2 .bentoheader{
         top: 25px;
         width: 150px;
         color:black;
         font-size: 13px;
         font-weight: 150;
-        left: 50%;
+        left: 55%;
         transform: translateX(-50%);
         position:fixed;
         z-index: 1;
@@ -964,8 +979,7 @@ a {
         color: black;
     }
     .grid2text{
-        margin-top: 200px;
-        margin-left: 30px;
+        margin: 200px 0px 0px 10px;
         width: 200px;
         font-size: 0.7rem;
         color: black;
@@ -1305,12 +1319,12 @@ a {
         margin-bottom: 100px;
     }
     .grid2 .bentoheader{
-        top: 15px;
+        top: 10px;
         width: 260px;
         color:black;
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 150;
-        left: 70%;
+        left: 75%;
         transform: translateX(-50%);
         position:fixed;
         z-index: 1;
@@ -1321,9 +1335,9 @@ a {
         color: black;
     }
     .grid2text{
-        margin-top: 200px;
+        margin-top: 45px;
         padding: 30px;
-        font-size: small;
+        font-size: 9px;
         color: black;
     }
     .grid2 .slider-container{
@@ -1350,24 +1364,24 @@ a {
     .slider-wrapper .slide{
         scroll-snap-align: start;
         height: 200px;
-        width: 340.67px;
+        width: 290.33px;
         list-style: none;
         border-radius: 25px;
         margin: 0px;
         overflow: hidden;
         background-image: url("../img/innovapostdesign.png");
         background-size: 40%;
-        background-position: 60% 30%;
+        background-position: 50% 200%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         transition: all 500ms;
     }
     #slide2{
         height: 200px;
-        width: 340.67px;
+        width: 290.33px;
         background-image: url("../img/metro.png");
         background-size: 40%;
-        background-position: 40% 30%;
+        background-position: 55% 200%;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
