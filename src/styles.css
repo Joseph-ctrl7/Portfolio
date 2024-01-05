@@ -92,21 +92,14 @@ footer {
     padding: 80px;
 }
 
-h1 {
-    font-size: 80px;
+.hero-text h1 {
+    font-size: clamp(50px, 7vw + 1rem, 100px);
     margin: 0;
     color: white;
 }
 
 h2 {
     font-size: 40px;
-    color: white;
-}
-
-p {
-    margin: 0;
-    font-size: 25px;
-    font-weight: 300;
     color: white;
 }
 
@@ -142,6 +135,10 @@ a {
 .hero-text p {
     padding-bottom: 30px;
     padding-top: 30px;
+    margin: 0;
+    font-size: clamp(18px, 1vw + 1rem, 25px);
+    font-weight: 300;
+    color: white;
 }
 
 .button{
@@ -189,6 +186,7 @@ a {
     gap: 1rem;
     grid-template-columns: repeat(3, minmax(240px, 1fr));
     grid-auto-rows: 240px;
+    transition: all 200ms;
 }
 
 .bentocard{
@@ -272,6 +270,9 @@ a {
     overflow: hidden;
     background-image: url("../img/innovapostdesign.png");
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     transition: all 500ms;
 }
 #slide2{
@@ -279,6 +280,9 @@ a {
     width: 292.9px;
     background-image: url("../img/metro.png");
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .slider-wrapper::-webkit-scrollbar {
     display: none;
@@ -549,19 +553,18 @@ a {
         flex-wrap: wrap;
     }*/
 
-    h1 {
+    /*h1 {
         font-size: 60px;
         margin: 0;
-    }
-
-    h2 {
-        font-size: 35px;
     }
     
     p {
         margin: 0;
         font-size: 20px;
         font-weight: 300;
+    }*/
+    h2 {
+        font-size: 35px;
     }
 
     .about-me-text {
@@ -646,6 +649,9 @@ a {
         overflow: hidden;
         background-image: url("../img/innovapostdesign.png");
         background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         transition: all 500ms;
     }
     #slide2{
@@ -653,6 +659,9 @@ a {
         width: 270.45px;
         background-image: url("../img/metro.png");
         background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
     .grid3{
@@ -800,6 +809,9 @@ a {
         overflow: hidden;
         background-image: url("../img/innovapostdesign.png");
         background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         transition: all 500ms;
     }
     #slide2{
@@ -807,6 +819,9 @@ a {
         width: 233.12px;
         background-image: url("../img/metro.png");
         background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
     .grid3{
@@ -932,28 +947,6 @@ a {
         top: 0px;
         margin-bottom: 100px;
     }
-    .grid2 .bentoheader{
-        top: 45px;
-        width: 260px;
-        color:black;
-        font-size: larger;
-        font-weight: 150;
-        left: 65%;
-        transform: translateX(-50%);
-        position:fixed;
-        z-index: 1;
-    }
-    .grid1text{
-        padding: 30px;
-        font-size: small;
-        color: black;
-    }
-    .grid2text{
-        margin-top: 200px;
-        padding: 30px;
-        font-size: small;
-        color: black;
-    }
     .grid2 .bentotext{
         top: 0px;
         margin-bottom: 100px;
@@ -1012,7 +1005,19 @@ a {
         overflow: hidden;
         background-image: url("../img/innovapostdesign.png");
         background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         transition: all 500ms;
+    }
+    #slide2{
+        height: 416px;
+        width: 303.67px;
+        background-image: url("../img/metro.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
 
@@ -1094,13 +1099,13 @@ a {
         background-color: #808080;
     }
 
-    h1 {
+   /* h1 {
         font-size: 70px;
     }
 
     p {
         font-size: 1.25rem;
-    }
+    }*/
 
     .button {
         width: 8rem;
@@ -1115,14 +1120,65 @@ a {
 
 }
 
+@media (max-width: 718px){
+    .grid2 .slider-container{
+        max-width: 213.67px;
+        height: 416px;
+        margin: 0;
+        width: 100%;
+        border-radius: 25px;
+        position: relative;
+    }
+    .grid2 .slider-wrapper{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 213.67px;
+        border-radius: 25px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        margin: 0;
+        padding: 0;
+        transition: all 1s;
+    }
+    .slider-wrapper .slide{
+        scroll-snap-align: start;
+        height: 416px;
+        width: 213.67px;
+        list-style: none;
+        border-radius: 25px;
+        margin: 0px;
+        overflow: hidden;
+        background-image: url("../img/innovapostdesign.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        transition: all 500ms;
+    }
+    #slide2{
+        height: 416px;
+        width: 213.67px;
+        background-image: url("../img/metro.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+}
+    
+
+
 @media (max-width: 510px){
-    h1 {
+   /* h1 {
         font-size: 50px;
     }
 
     p {
         font-size: 1.25rem;
-    }
+    }*/
 
     nav{
         position: absolute;
@@ -1285,7 +1341,7 @@ a {
     .grid2 .slider-wrapper{
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: 393.33px;
+        grid-auto-columns: 340.67px;
         border-radius: 25px;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -1298,20 +1354,26 @@ a {
     .slider-wrapper .slide{
         scroll-snap-align: start;
         height: 200px;
-        width: 393.33px;
+        width: 340.67px;
         list-style: none;
         border-radius: 25px;
         margin: 0px;
         overflow: hidden;
         background-image: url("../img/innovapostdesign.png");
-        background-size: cover;
+        background-size: 40%;
+        background-position: 60% 30%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         transition: all 500ms;
     }
     #slide2{
         height: 200px;
-        width: 393.33px;
+        width: 340.67px;
         background-image: url("../img/metro.png");
-        background-size: cover;
+        background-size: 40%;
+        background-position: 40% 30%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
     .grid3{
@@ -1453,7 +1515,7 @@ a {
     .grid2 .slider-wrapper{
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: 267.33px;
+        grid-auto-columns: 267.32px;
         border-radius: 25px;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -1466,20 +1528,26 @@ a {
     .slider-wrapper .slide{
         scroll-snap-align: start;
         height: 216px;
-        width: 267.33px;
+        width: 267.32px;
         list-style: none;
         border-radius: 25px;
         margin: 0px;
         overflow: hidden;
         background-image: url("../img/innovapostdesign.png");
-        background-size: cover;
+        background-size: 50%;
+        background-position: 55% 10%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         transition: all 500ms;
     }
     #slide2{
         height: 216px;
-        width: 267.33px;
+        width: 267.32px;
         background-image: url("../img/metro.png");
-        background-size: cover;
+        background-size: 50%;
+        background-position: 55% 10%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
 
     .grid3{
@@ -1566,11 +1634,3 @@ a {
         transition: none;
     }
 }
-
-
-
-
-
-
-
-
