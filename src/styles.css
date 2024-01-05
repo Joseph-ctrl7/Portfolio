@@ -213,10 +213,6 @@ a {
     grid-row: span 2 /auto;
     transition-delay: 400ms;
 }
-.grid2 .bentotext{
-    top: 0px;
-    margin-bottom: 100px;
-}
 .grid2 .bentoheader{
     top: 45px;
     width: 260px;
@@ -1483,7 +1479,7 @@ a {
         margin-bottom: 100px;
     }
     .grid2 .bentoheader{
-        top: 25px;
+        top: 15px;
         width: 260px;
         color:black;
         font-size: 12px;
@@ -1499,9 +1495,8 @@ a {
         color: black;
     }
     .grid2text{
-        margin-top: 200px;
-        padding: 30px;
-        font-size: small;
+        margin: 55px 0 0 0;
+        font-size: 9px;
         color: black;
     }
     .grid2 .slider-container{
@@ -1515,7 +1510,7 @@ a {
     .grid2 .slider-wrapper{
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: 267.32px;
+        grid-auto-columns: 249.32px;
         border-radius: 25px;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -1528,24 +1523,24 @@ a {
     .slider-wrapper .slide{
         scroll-snap-align: start;
         height: 216px;
-        width: 267.32px;
+        width: 249.32px;
         list-style: none;
         border-radius: 25px;
         margin: 0px;
         overflow: hidden;
         background-image: url("../img/innovapostdesign.png");
         background-size: 50%;
-        background-position: 55% 10%;
+        background-position: 55% 200%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         transition: all 500ms;
     }
     #slide2{
         height: 216px;
-        width: 267.32px;
+        width: 249.32px;
         background-image: url("../img/metro.png");
         background-size: 50%;
-        background-position: 55% 10%;
+        background-position: 55% 200%;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
