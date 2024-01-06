@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const card_wrapper = document.querySelector(".card-wrapper");
     const arrowBtns = document.querySelectorAll(".project-container i");
     const hamburgerMenuItems = document.querySelectorAll(".menu-item");
+    const slideShowTrack = document.querySelector(".slideshow-track");
 
 
     //function for hamburger menu animation
@@ -86,5 +87,21 @@ document.addEventListener('DOMContentLoaded', function(){
             card_wrapper.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
         })
     })
+
+    //code for infinite scroller
+    function addAnimation(){
+        const slideshow = slideShowTrack.querySelector(".slideshow"); 
+        const icons = Array.from(slideshow.children);
+
+        icons.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute('aria-hidden', true);
+            slideshow.appendChild(duplicatedItem);
+        })
+    }
+
+    if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+        addAnimation();
+    }
 
 });
