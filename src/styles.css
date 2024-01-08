@@ -207,10 +207,12 @@ a {
     background-image:
     radial-gradient(at 96% 2%, hsla(303,80%,90%,1) 0px, transparent 50%),
     radial-gradient(at 33% 83%, hsla(284,26%,98%,1) 0px, transparent 50%);
+    text-align: center;
     transition-delay: 300ms;
 }
 .grid2{
     grid-row: span 2 /auto;
+    text-align: center;
     transition-delay: 400ms;
 }
 .grid2 .bentoheader{
@@ -219,8 +221,7 @@ a {
     color:black;
     font-size: larger;
     font-weight: 400;
-    left: 65%;
-    transform: translateX(-50%);
+    left: 5%;
     position:fixed;
     z-index: 1;
 }
@@ -311,6 +312,7 @@ a {
 
 .grid3{
     transition-delay: 500ms;
+    text-align: center;
 }
 .grid3header{
     margin: 0;
