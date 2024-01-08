@@ -833,8 +833,7 @@ a {
         color:black;
         font-size: 15px;
         font-weight: 150;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 20%;
         position:fixed;
         z-index: 1;
     }
@@ -1385,8 +1384,7 @@ a {
         color:black;
         font-size: 12px;
         font-weight: 150;
-        left: 75%;
-        transform: translateX(-50%);
+        left: 50%;
         position:fixed;
         z-index: 1;
     }
@@ -1396,7 +1394,7 @@ a {
         color: black;
     }
     .grid2text{
-        margin-top: 45px;
+        margin: 45px 0 0 65px;
         padding: 30px;
         font-size: 9px;
         color: black;
@@ -1425,24 +1423,24 @@ a {
     .slider-wrapper .slide{
         scroll-snap-align: start;
         height: 200px;
-        width: 290.33px;
+        width: 393.33px;
         list-style: none;
         border-radius: 25px;
         margin: 0px;
         overflow: hidden;
         background-image: url("../img/innovapostdesign.png");
         background-size: 40%;
-        background-position: 50% 200%;
+        background-position: 50% 40%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         transition: all 500ms;
     }
     #slide2{
         height: 200px;
-        width: 290.33px;
+        width: 393.33px;
         background-image: url("../img/metro.png");
         background-size: 40%;
-        background-position: 55% 200%;
+        background-position: 55% 40%;
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
@@ -1559,7 +1557,7 @@ a {
         color:black;
         font-size: 12px;
         font-weight: 150;
-        left: 80%;
+        left: 50%;
         transform: translateX(-50%);
         position:fixed;
         z-index: 1;
