@@ -218,7 +218,7 @@ a {
     width: 260px;
     color:black;
     font-size: larger;
-    font-weight: 150;
+    font-weight: 400;
     left: 65%;
     transform: translateX(-50%);
     position:fixed;
@@ -312,6 +312,23 @@ a {
 .grid3{
     transition-delay: 500ms;
 }
+.grid3header{
+    margin: 0;
+    font-size: clamp(5px, 8vw + 1rem, 15px);
+    color: black;
+}
+.grid3 img{
+    height: 130px;
+    width: 150px;
+}
+.grid3text{
+    font-size: clamp(5px, 4vw + 1rem, 11px);
+    padding: 0 30px 0 30px;
+    margin: 0;
+    color: black;
+}
+
+
 .grid4{
     transition-delay: 600ms;
 }
@@ -319,6 +336,10 @@ a {
     grid-column: span 3 / auto;
     transition-delay: 700ms;
     overflow: hidden;
+}
+.grid5header{
+    margin: 0 0 50px 0;
+    color: black;
 }
 .slideshow-track{
     max-width: 863.33px;
@@ -347,9 +368,14 @@ a {
     transform: rotateZ(180deg);
 }
 .slideshow{
+    list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 30px;
     animation: scroll 40s linear infinite;
+}
+.icon svg{
+    height: 60px;
+    width: 60px;
 }
 
 
@@ -1673,7 +1699,7 @@ a {
 
 @keyframes scroll{
     to {
-        transform: translateX(-100%);
+        transform: translate(-100%);
     }
     
 }
