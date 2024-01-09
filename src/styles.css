@@ -270,6 +270,10 @@ footer h2{
 .grid2{
     grid-row: span 2 /auto;
     text-align: center;
+    background-color:hsla(280,35%,92%,1);
+    background-image:
+    radial-gradient(at 7% 23%, hsla(27,48%,98%,1) 0px, transparent 50%),
+    radial-gradient(at 73% 66%, hsla(240,13%,97%,1) 0px, transparent 50%);
     transition-delay: 400ms;
 }
 .grid2 .bentoheader{
@@ -355,6 +359,10 @@ footer h2{
 }
 
 .grid3{
+    background-color:hsla(304,22%,98%,1);
+    background-image:
+    radial-gradient(at 48% 37%, hsla(301,72%,90%,1) 0px, transparent 50%),
+    radial-gradient(at 64% 63%, hsla(294,85%,91%,1) 0px, transparent 50%);
     transition-delay: 500ms;
     text-align: center;
 }
@@ -376,9 +384,19 @@ footer h2{
 
 
 .grid4{
+    text-align: center;
+    background-image: url("../img/ama.jpg");
+    background-size: cover;
     transition-delay: 600ms;
 }
+.grid4 p{
+    color: white;
+}
 .grid5{
+    background-color:hsla(304,22%,98%,1);
+    background-image:
+    radial-gradient(at 0% 6%, hsla(301,72%,90%,1) 0px, transparent 50%),
+    radial-gradient(at 100% 99%, hsla(279,78%,91%,1) 0px, transparent 50%);
     grid-column: span 3 / auto;
     transition-delay: 700ms;
     overflow: hidden;
@@ -388,7 +406,7 @@ footer h2{
     color: black;
 }
 .slideshow-track{
-    max-width: 912.67px;
+    max-width: 1200px;
     overflow: hidden;
 }
 .slideshow-track::before,
