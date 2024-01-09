@@ -1485,9 +1485,12 @@ footer h2{
 
     footer h2{
         font-size: 15px;
-        margin-left: 10px;
+        margin-left: 50px;
     }
 
+    .footer-text{
+        margin-left: 50px;
+    }
     .footer-text .text{
         margin: 15px;
         font-size: 8px;
